@@ -11,24 +11,24 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Says"),
+          title: const Text("Latihan Row & Column"),
         ),
-        body: Center(
-            child: Container(
-                color: Colors.red.shade200,
-                width: 200,
-                height: 50,
-                child: const Text(
-                  "Investasikan uang anda untuk masa depan bersama kami",
-                  maxLines: 2, //maximal akan 2 baris
-                  style: TextStyle(
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white,
-                      fontSize: 20),
-                  overflow: TextOverflow
-                      .ellipsis, //akan memunculkan titik2 jika terlalu panjang
-                ))),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            const Text("Text 1"),
+            const Text("Text 2"),
+            const Text("Text 3"),
+            Row(
+              children: const <Widget>[
+                Text("Text 4"),
+                Text("Text 5"),
+                Text("Text 6")
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
