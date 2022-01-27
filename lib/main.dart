@@ -13,21 +13,22 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Latihan Row & Column"),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            const Text("Text 1"),
-            const Text("Text 2"),
-            const Text("Text 3"),
-            Row(
-              children: const <Widget>[
-                Text("Text 4"),
-                Text("Text 5"),
-                Text("Text 6")
-              ],
-            )
-          ],
+        body: Container(
+          color: Colors.red.shade300,
+          margin: const EdgeInsets.fromLTRB(20, 10, 10, 10),
+          padding: const EdgeInsets.only(bottom: 10, top: 10),
+          child: Container(
+            margin: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: <Color>[
+                      Colors.amber.shade200,
+                      Colors.blue.shade200
+                    ])),
+          ),
         ),
       ),
     );
