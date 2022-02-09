@@ -2,32 +2,46 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int counter = 0;
+  void increamentBtn() {
+    // setState untuk refresh
+    setState(() {
+      counter += 1;
+    });
+  }
+
+  void decreamentBtn() => setState(() {
+        counter -= 1;
+      });
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Latihan Row & Column"),
+          title: const Text("Learning Statefull Widget"),
         ),
-        body: Container(
-          color: Colors.red.shade300,
-          margin: const EdgeInsets.fromLTRB(20, 10, 10, 10),
-          padding: const EdgeInsets.only(bottom: 10, top: 10),
-          child: Container(
-            margin: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: <Color>[
-                      Colors.amber.shade200,
-                      Colors.blue.shade200
-                    ])),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                counter.toString(),
+                style: TextStyle(fontSize: 10 + counter.toDouble()),
+              ),
+              ElevatedButton(
+                  onPressed: increamentBtn, child: const Text("Increament")),
+              ElevatedButton(
+                  onPressed: decreamentBtn, child: const Text("Deccreament")),
+            ],
           ),
         ),
       ),
