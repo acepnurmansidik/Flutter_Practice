@@ -11,40 +11,41 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int counter = 0;
-  void increamentBtn() {
-    // setState untuk refresh
-    setState(() {
-      counter += 1;
-    });
-  }
-
-  void decreamentBtn() => setState(() {
-        counter -= 1;
-      });
+  List<Widget> widgetsTea = [];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Learning Statefull Widget"),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                counter.toString(),
-                style: TextStyle(fontSize: 10 + counter.toDouble()),
-              ),
-              ElevatedButton(
-                  onPressed: increamentBtn, child: const Text("Increament")),
-              ElevatedButton(
-                  onPressed: decreamentBtn, child: const Text("Deccreament")),
-            ],
+          appBar: AppBar(
+            title: const Text("Learning Anonymous method"),
           ),
-        ),
-      ),
+          body: ListView(
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  ElevatedButton(
+                    child: Text("Added Data"),
+                    onPressed: () => setState(() {
+                      widgetsTea.add(Text("Date Ke-" + counter.toString()));
+                      counter++;
+                    }),
+                  ),
+                  ElevatedButton(
+                    child: Text("Delete Data"),
+                    onPressed: () => setState(() {
+                      widgetsTea.removeLast();
+                      counter--;
+                    }),
+                  )
+                ],
+              ),
+              Column(
+                children: widgetsTea,
+              )
+            ],
+          )),
     );
   }
 }
