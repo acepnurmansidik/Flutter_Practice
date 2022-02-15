@@ -10,42 +10,27 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int counter = 0;
-  List<Widget> widgetsTea = [];
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            title: const Text("Learning Anonymous method"),
+        appBar: AppBar(
+          title: const Text("latihan text style"),
+        ),
+        body: const Center(
+          child: Text(
+            "Ini adalah text",
+            style: TextStyle(
+                fontFamily: "Montserrat",
+                fontStyle: FontStyle.italic,
+                fontSize: 30,
+                decoration: TextDecoration.overline,
+                decorationColor: Colors.red,
+                decorationThickness: 2,
+                decorationStyle: TextDecorationStyle.dashed),
           ),
-          body: ListView(
-            children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  ElevatedButton(
-                    child: Text("Added Data"),
-                    onPressed: () => setState(() {
-                      widgetsTea.add(Text("Date Ke-" + counter.toString()));
-                      counter++;
-                    }),
-                  ),
-                  ElevatedButton(
-                    child: Text("Delete Data"),
-                    onPressed: () => setState(() {
-                      widgetsTea.removeLast();
-                      counter--;
-                    }),
-                  )
-                ],
-              ),
-              Column(
-                children: widgetsTea,
-              )
-            ],
-          )),
+        ),
+      ),
     );
   }
 }
