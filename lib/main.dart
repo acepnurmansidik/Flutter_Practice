@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -10,6 +12,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  Random random = Random();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,18 +20,18 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text("latihan text style"),
         ),
-        body: const Center(
-          child: Text(
-            "Ini adalah text",
-            style: TextStyle(
-                fontFamily: "Montserrat",
-                fontStyle: FontStyle.italic,
-                fontSize: 30,
-                decoration: TextDecoration.overline,
-                decorationColor: Colors.red,
-                decorationThickness: 2,
-                decorationStyle: TextDecorationStyle.dashed),
-          ),
+        body: Center(
+          child: GestureDetector(
+              onTap: () {
+                setState(() {});
+              },
+              child: AnimatedContainer(
+                color: Color.fromARGB(255, random.nextInt(256),
+                    random.nextInt(256), random.nextInt(256)),
+                duration: const Duration(seconds: 1),
+                width: 50.0 + random.nextInt(101),
+                height: 50.0 + random.nextInt(101),
+              )),
         ),
       ),
     );
