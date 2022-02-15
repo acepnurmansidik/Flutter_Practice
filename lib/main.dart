@@ -17,23 +17,42 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text("latihan text style"),
-        ),
-        body: Center(
-          child: GestureDetector(
-              onTap: () {
-                setState(() {});
-              },
-              child: AnimatedContainer(
-                color: Color.fromARGB(255, random.nextInt(256),
-                    random.nextInt(256), random.nextInt(256)),
-                duration: const Duration(seconds: 1),
-                width: 50.0 + random.nextInt(101),
-                height: 50.0 + random.nextInt(101),
-              )),
-        ),
-      ),
+          appBar: AppBar(
+            title: const Text("latihan text style"),
+          ),
+          body: Column(
+            children: <Widget>[
+              Flexible(
+                  flex: 1,
+                  child: Row(
+                    children: <Widget>[
+                      Flexible(
+                          flex: 1,
+                          child: Container(
+                            color: Colors.amberAccent[200],
+                          )),
+                      Flexible(
+                          flex: 1,
+                          child: Container(
+                            color: Colors.blueAccent[200],
+                          )),
+                      Flexible(
+                          flex: 1,
+                          child: Container(color: Colors.blueGrey[200]))
+                    ],
+                  )),
+              Flexible(
+                  flex: 6,
+                  child: Container(
+                    color: Colors.blue[200],
+                  )),
+              Flexible(
+                  flex: 1,
+                  child: Container(
+                    color: Colors.green[200],
+                  )),
+            ],
+          )),
     );
   }
 }
