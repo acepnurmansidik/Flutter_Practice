@@ -10,253 +10,29 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            title: const Text("Stack & Align widget"),
+            title: const Text("Imager Widget"),
           ),
-          body: Stack(
-            children: <Widget>[
-              // Stack 1 / background
-              Column(
-                children: <Widget>[
-                  Flexible(
-                      flex: 1,
-                      child: Row(
-                        children: <Widget>[
-                          Flexible(
-                              flex: 1,
-                              child: Container(
-                                color: Colors.amber[200],
-                              )),
-                          Flexible(
-                              flex: 1,
-                              child: Container(
-                                color: Colors.blue[200],
-                              ))
-                        ],
-                      )),
-                  Flexible(
-                      flex: 1,
-                      child: Row(
-                        children: <Widget>[
-                          Flexible(
-                            flex: 1,
-                            child: Container(
-                              color: Colors.blueGrey[200],
-                            ),
-                          ),
-                          Flexible(
-                              flex: 1,
-                              child: Container(
-                                color: Colors.deepOrange[200],
-                              ))
-                        ],
-                      ))
-                ],
-              ),
-              ListView(
-                children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text(
-                          "This is middle stack",
-                          style: TextStyle(fontSize: 30),
-                        ),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-              Align(
-                alignment: const Alignment(0, 1.015),
-                child: ElevatedButton(
-                  child: const Text("Button"),
-                  onPressed: () {},
-                ),
-              )
-            ],
+          body: Center(
+            child: Container(
+                height: 200,
+                width: 200,
+                padding: const EdgeInsets.all(10),
+                // color: Colors.black26,
+                // ngambil dari lokal/assets
+                child: const Image(
+                  image: AssetImage("images/airi.jpg"),
+                  fit: BoxFit.contain,
+                  repeat: ImageRepeat.repeat,
+                )),
+            // diambil menggunakan  link yang ada di unternet
+            // child: const Image(
+            //   image: NetworkImage(
+            //       "https://imgx.gridoto.com/crop/0x0:0x0/700x465/photo/2020/08/21/418917097.jpg"),
+            //   // mengatur fit dari imagae
+            //   fit: BoxFit.contain,
+            //   // utk mengulang foto(bisa vertical atau horizontal)
+            //   repeat: ImageRepeat.repeat,
+            // ),
           )),
     );
   }
