@@ -10,29 +10,42 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            title: const Text("Imager Widget"),
+            title: const Text("Space widget"),
           ),
           body: Center(
-            child: Container(
-                height: 200,
-                width: 200,
-                padding: const EdgeInsets.all(10),
-                // color: Colors.black26,
-                // ngambil dari lokal/assets
-                child: const Image(
-                  image: AssetImage("images/airi.jpg"),
-                  fit: BoxFit.contain,
-                  repeat: ImageRepeat.repeat,
-                )),
-            // diambil menggunakan  link yang ada di unternet
-            // child: const Image(
-            //   image: NetworkImage(
-            //       "https://imgx.gridoto.com/crop/0x0:0x0/700x465/photo/2020/08/21/418917097.jpg"),
-            //   // mengatur fit dari imagae
-            //   fit: BoxFit.contain,
-            //   // utk mengulang foto(bisa vertical atau horizontal)
-            //   repeat: ImageRepeat.repeat,
-            // ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              // space widget bergun untuk mengatur space yang kosong
+              children: <Widget>[
+                Spacer(
+                  flex: 1,
+                ),
+                Container(
+                  width: 80,
+                  height: 80,
+                  color: Colors.red[200],
+                ),
+                Spacer(
+                  flex: 3,
+                ),
+                Container(
+                  width: 80,
+                  height: 80,
+                  color: Colors.yellow[200],
+                ),
+                Spacer(
+                  flex: 1,
+                ),
+                Container(
+                  width: 80,
+                  height: 80,
+                  color: Colors.green[200],
+                ),
+                Spacer(
+                  flex: 2,
+                ),
+              ],
+            ),
           )),
     );
   }
